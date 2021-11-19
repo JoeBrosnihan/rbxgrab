@@ -25,10 +25,20 @@ For example, a pistol would have an Aim ObjectValue that references an Attachmen
 
 Fired when the holder activates this object.
 
+Currently, pressing the left mouse button triggers activation.
+
 TODO: Can I switch to a BoolValue?
 (Is there any problem with out of order property replication.)
 
 ## [BindableEvent] DeactivatedEvent
+
+Fired when the holder deactivates this object.
+
+Currently, releasing the left mouse button triggers deactivation.
+
+## [BindableEvent] GrabbedEvent
+
+Fired when the object is grabbed. The character that grabbed the object is passed as the first argument.
 
 ## [BindableEvent] GrabReleasedEvent
 
