@@ -1,10 +1,16 @@
 # RBX Grab
 
-## Searching Algorithm
+RBX Grab is a grab system designed to be dropped in to any experience to enable characters grabbing arbitrary objects. 
 
-For each of these objects, the system first checks the grabbed Part.
+You can provide hints on how any object is intended to be held. For example, a sword can be configured so characters prefer to pick it up by its handle.
 
-Checking an instance will
+You can also hook into events to detect when objects are grabbed, released, activated, and deactivated. For example, a Script in a fire extinguisher can detect 
+
+## API
+
+RBX Grab communicates with other scripts through several Instances in the DataModel.
+
+The system looks for specially named Instances that are direct children of any ancestor of the grabbed BasePart, in ascending order. First, the grabbed BasePart is checked:
 1. Return a direct child with the matching Name and Class.
 2. If an ObjectValue with the matching Name is present, return its Value. (Useful for directing search to an Attachment in a specific Part)
 3. Check the instance's Parent, if it's not the Workspace.
