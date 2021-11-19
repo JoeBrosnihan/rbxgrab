@@ -17,17 +17,17 @@ The system looks for specially named Instances that are direct children of any a
 
 A common pattern is to group several Parts into a Model and put all of the relevant grab APIs as children of the Model.
 
-## [Attachment] GrabHint
+### [Attachment] GrabHint
 
 Hints that the object is intended to be held such that the character's hand CFrame matches the GrabHint's.
 
-## [Attachment] Aim
+### [Attachment] Aim
 
 Hints that this objects is intended to be held such that the Attachment referenced by Aim points at a location the player is targetting.
 
 For example, a pistol would have an Aim ObjectValue that references an Attachment aligned down the barrel so the player knows to point the pistol at the mouse.
 
-## [BindableEvent] ActivatedEvent
+### [BindableEvent] ActivatedEvent
 
 Fired when the holder activates this object.
 
@@ -36,16 +36,16 @@ Currently, pressing the left mouse button triggers activation.
 TODO: Can I switch to a BoolValue?
 (Is there any problem with out of order property replication.)
 
-## [BindableEvent] DeactivatedEvent
+### [BindableEvent] DeactivatedEvent
 
 Fired when the holder deactivates this object.
 
 Currently, releasing the left mouse button triggers deactivation.
 
-## [BindableEvent] GrabbedEvent
+### [BindableEvent] GrabbedEvent
 
 Fired when the object is grabbed. The character that grabbed the object is passed as the first argument.
 
-## [BindableEvent] GrabReleasedEvent
+### [BindableEvent] GrabReleasedEvent
 
 Fired when the grab is released.
